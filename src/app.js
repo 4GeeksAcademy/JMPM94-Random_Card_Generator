@@ -55,16 +55,14 @@ window.onload = function() {
 
 // Size Changer
 
-// window.document.addEventListener("input" ,() => {
-//   .card-body1
+function resize() {
+  // changeWidth
+  let ancho = document.getElementById("cardWidth").value;
+  document.getElementById("card-body1").style.width = ancho + "px";
 
-// }
-// )
-// ["width", "height"].forEach(dimension => {
-//   window[dimension].addEventListener(
-//     "change",
-//     ({ "card-body1": { value } }) => {
-//       "card-body1"[dimension] = value + "px";
-//     }
-//   );
-// });
+  // changeHeight
+  let alto = document.getElementById("cardHeight").value;
+  document.getElementById("card-body1").style.height = alto + "px";
+
+  document.getElementById("refresh-button").onclick = resize;
+}

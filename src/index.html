@@ -36,19 +36,13 @@
         <div class="bottom-suit" id="bottom-suit"></div>
       </div>
       <div class="fixed-bottom mx-auto">
-        <!-- <label for="width1">Ancho</label>
-        <input id="width1" type="number" />
-        <label for="height1">Alto</label>
-        <input id="height1" type="number" /> -->
-
         <form class="p-4 w-25 mx-auto">
-          <label class="form-label" for="width1">Width</label><br />
-          <input class="form-control" type="number" id="width1" name="width"
-          value=><br />
+          <label class="form-label" for="cardWidth">Width</label><br />
+          <input class="form-control" type="number" id="cardWidth" /><br />
           <label class="form-label" for="height1">Height</label><br />
-          <input class="form-control" type="number" id="height1" name="height"
-          value=><br />
+          <input class="form-control" type="number" id="cardHeight" /><br />
           <button
+            onclick="resize()"
             type="button"
             id="refresh-button"
             class="btn btn-light button"
