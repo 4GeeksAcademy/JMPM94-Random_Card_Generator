@@ -51,18 +51,21 @@ window.onload = function() {
   setInterval(function() {
     getRandomCard();
   }, 10000);
+  // Size Changer
+
+  window.resize = function() {
+    console.log("resize");
+    // changeWidth
+    let ancho = document.querySelector("#cardWidth").value;
+    document.querySelector("#card-contain").style.width = ancho + "px";
+
+    // changeHeight
+    let alto = document.querySelector("#cardHeight").value;
+    console.log(ancho);
+    console.log(alto);
+
+    document.querySelector(".card-body1").style.height = `${alto}px`;
+
+    // document.getElementById("refresh-button").onclick = resize;
+  };
 };
-
-// Size Changer
-
-function resize() {
-  // changeWidth
-  let ancho = document.getElementById("cardWidth").value;
-  document.getElementById("card-body1").style.width = ancho + "px";
-
-  // changeHeight
-  let alto = document.getElementById("cardHeight").value;
-  document.getElementById("card-body1").style.height = alto + "px";
-
-  document.getElementById("refresh-button").onclick = resize;
-}
